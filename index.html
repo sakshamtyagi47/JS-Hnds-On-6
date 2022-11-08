@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving Hands On</title>
+</head>
+<body>
+    <h1>Q.1-Find the Smaller Angle</h1>
+    <pre>
+     Ans-   var Minimal_Angle = (h, m) => 
+        {
+        
+        if( h===12){
+                    h = 0;
+                  }   
+                  if(m===60){
+                    m = 0;
+                    h+=1;
+                    if(h>12){
+                      h = h-12;
+                    }
+                  }
+                  let hAngle = 0.5*(h*60+m);
+                  let mAngle = 6*m;
+                  let res = Math.abs(hAngle-mAngle);
+                  res = Math.min((360-res),res);
+                  return res;   
+        
+        };
+        </pre>
+        <br>
+
+        <h1>Q.2-Check whether the year is Leap year or not.</h1>
+        <pre>
+         Ans-   var Check_Leap = (year) => 
+            {
+             
+            
+             if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)){
+               return (" Leap Year");
+             }
+             else{
+               return ("Non Leap Year");
+             }
+            };
+             </pre>
+             <br>
+
+             <h1>Q.3-Perfect Number Check.</h1>
+             <pre>
+             Ans-   var Perfect_Check = (N) => 
+                {
+                     if(N===1){
+                    return "YES";
+                }
+                else {
+                      let sum=0;
+                     for(i=1;i < N;i++){
+                     if(N%i===0){
+                      sum=sum+i;
+                     }
+                   }
+                   if(sum===N)
+                   {
+                     return "YES";
+                   }
+                   else {
+                     return "NO";
+                   }
+                }
+                        
+                };
+            </pre>
+
+            <br>
+
+            <h1>Q.4-Reverse a Number.</h1>
+             <pre>
+             Ans-   var Reverse_Number = (N) => 
+                {
+                  
+                  let rev=0;
+                  while(N!==0){
+                    let rem=(N%10);
+                    rev=rev*10+rem;
+                    N=Math.floor(N/10);
+                  }
+                  return rev;
+                 
+                };
+                </pre>
+                <br>
+
+                <h1>Q.5-Substring Check.</h1>
+
+                <pre>
+                 Ans-   var Substring_Check = (S1, S2) => 
+                    {
+                        
+                        if(S1.includes (S2)===true){
+                          return ("YES");
+                        }else{
+                          return ("NO");
+                        }
+                        
+                         
+                    };
+                </pre>
+
+
+    
+</body>
+</html>
